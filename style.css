@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  background: lightgreen;
+  text-align: center;
+  padding: 50px;
+}
+
+.game-container {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.choices button {
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: #4caf50;
+  color: white;
+  transition: 0.2s ease-in-out;
+  transform: scale(1);
+}
+
+.choices button:hover {
+  background: #45a049;
+  transform: scale(1.05);
+}
+
+.choices button:active {
+  transform: scale(0.95);
+}
+
+#result {
+  font-size: 24px;
+  margin-top: 20px;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeInText 0.4s ease-in-out forwards;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#score {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#reset-btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 18px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#reset-btn:hover {
+  background-color: #d32f2f;
+}
+
+.pulse {
+  animation: pulseScore 0.4s ease-in-out;
+}
+
+@keyframes pulseScore {
+  0% {
+    transform: scale(1);
+    color: black;
+  }
+  50% {
+    transform: scale(1.2);
+    color: #2196f3;
+  }
+  100% {
+    transform: scale(1);
+    color: black;
+  }
+}
